@@ -10,11 +10,13 @@ src/apis/SystemApi.ts
 src/apis/index.ts
 src/index.ts
 src/models/BroadcastMessageRequest.ts
+src/models/ClearFirmwareErrorResponse.ts
 src/models/CoAPMetadata.ts
 src/models/Collection.ts
 src/models/CollectionFirmware.ts
 src/models/CollectionFirmwareFirmwareManagement.ts
 src/models/CreateFirmwareRequest.ts
+src/models/DataDumpRequest.ts
 src/models/DataDumpResponse.ts
 src/models/Device.ts
 src/models/DumpedCollection.ts
@@ -42,6 +44,7 @@ src/models/OutputType.ts
 src/models/ProtobufAny.ts
 src/models/RpcStatus.ts
 src/models/SendMessageRequest.ts
+src/models/SendMessageResponse.ts
 src/models/SystemInfoResponse.ts
 src/models/UDPMetadata.ts
 src/models/UpdateDeviceRequest.ts
