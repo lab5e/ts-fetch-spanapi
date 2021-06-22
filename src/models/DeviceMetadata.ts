@@ -14,41 +14,41 @@
 
 import { exists, mapValues } from '../runtime';
 import {
-    Device,
-    DeviceFromJSON,
-    DeviceFromJSONTyped,
-    DeviceToJSON,
+    NetworkOperator,
+    NetworkOperatorFromJSON,
+    NetworkOperatorFromJSONTyped,
+    NetworkOperatorToJSON,
 } from './';
 
 /**
  * 
  * @export
- * @interface DumpedDevice
+ * @interface DeviceMetadata
  */
-export interface DumpedDevice {
+export interface DeviceMetadata {
     /**
      * 
-     * @type {Device}
-     * @memberof DumpedDevice
+     * @type {NetworkOperator}
+     * @memberof DeviceMetadata
      */
-    device?: Device;
+    simOperator?: NetworkOperator;
 }
 
-export function DumpedDeviceFromJSON(json: any): DumpedDevice {
-    return DumpedDeviceFromJSONTyped(json, false);
+export function DeviceMetadataFromJSON(json: any): DeviceMetadata {
+    return DeviceMetadataFromJSONTyped(json, false);
 }
 
-export function DumpedDeviceFromJSONTyped(json: any, ignoreDiscriminator: boolean): DumpedDevice {
+export function DeviceMetadataFromJSONTyped(json: any, ignoreDiscriminator: boolean): DeviceMetadata {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         
-        'device': !exists(json, 'device') ? undefined : DeviceFromJSON(json['device']),
+        'simOperator': !exists(json, 'simOperator') ? undefined : NetworkOperatorFromJSON(json['simOperator']),
     };
 }
 
-export function DumpedDeviceToJSON(value?: DumpedDevice | null): any {
+export function DeviceMetadataToJSON(value?: DeviceMetadata | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -57,7 +57,7 @@ export function DumpedDeviceToJSON(value?: DumpedDevice | null): any {
     }
     return {
         
-        'device': DeviceToJSON(value.device),
+        'simOperator': NetworkOperatorToJSON(value.simOperator),
     };
 }
 

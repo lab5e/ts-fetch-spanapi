@@ -19,6 +19,7 @@ src/models/CreateFirmwareRequest.ts
 src/models/DataDumpRequest.ts
 src/models/DataDumpResponse.ts
 src/models/Device.ts
+src/models/DeviceMetadata.ts
 src/models/DumpedCollection.ts
 src/models/DumpedDevice.ts
 src/models/FieldMask.ts
@@ -33,6 +34,7 @@ src/models/ListOutputResponse.ts
 src/models/MessageSendResult.ts
 src/models/MultiSendMessageResponse.ts
 src/models/NetworkMetadata.ts
+src/models/NetworkOperator.ts
 src/models/Output.ts
 src/models/OutputConfig.ts
 src/models/OutputDataMessage.ts
