@@ -2,7 +2,6 @@
 README.md
 package.json
 src/apis/CollectionsApi.ts
-src/apis/DatadumpApi.ts
 src/apis/DevicesApi.ts
 src/apis/FotaApi.ts
 src/apis/OutputsApi.ts
@@ -16,12 +15,8 @@ src/models/Collection.ts
 src/models/CollectionFirmware.ts
 src/models/CollectionFirmwareFirmwareManagement.ts
 src/models/CreateFirmwareRequest.ts
-src/models/DataDumpRequest.ts
-src/models/DataDumpResponse.ts
 src/models/Device.ts
 src/models/DeviceMetadata.ts
-src/models/DumpedCollection.ts
-src/models/DumpedDevice.ts
 src/models/FieldMask.ts
 src/models/Firmware.ts
 src/models/FirmwareMetadata.ts
