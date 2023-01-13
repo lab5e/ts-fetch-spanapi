@@ -46,6 +46,7 @@ src/models/ListGatewayResponse.ts
 src/models/ListNetworkResponse.ts
 src/models/ListOutputResponse.ts
 src/models/ListUpstreamMessagesResponse.ts
+src/models/MQTTMetadata.ts
 src/models/MessageDownstream.ts
 src/models/MessageState.ts
 src/models/MessageTransport.ts

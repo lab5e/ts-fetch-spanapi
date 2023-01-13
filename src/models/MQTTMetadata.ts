@@ -14,34 +14,34 @@
 
 import { exists, mapValues } from '../runtime';
 /**
- * Clear firmware error response object
+ * MQTT metadata for messages received through one of the MQTT endpoints. This is an EXPERIMENTAL feature.
  * @export
- * @interface ClearFirmwareErrorResponse
+ * @interface MQTTMetadata
  */
-export interface ClearFirmwareErrorResponse {
+export interface MQTTMetadata {
     /**
      * 
      * @type {string}
-     * @memberof ClearFirmwareErrorResponse
+     * @memberof MQTTMetadata
      */
-    result?: string;
+    topic?: string;
 }
 
-export function ClearFirmwareErrorResponseFromJSON(json: any): ClearFirmwareErrorResponse {
-    return ClearFirmwareErrorResponseFromJSONTyped(json, false);
+export function MQTTMetadataFromJSON(json: any): MQTTMetadata {
+    return MQTTMetadataFromJSONTyped(json, false);
 }
 
-export function ClearFirmwareErrorResponseFromJSONTyped(json: any, ignoreDiscriminator: boolean): ClearFirmwareErrorResponse {
+export function MQTTMetadataFromJSONTyped(json: any, ignoreDiscriminator: boolean): MQTTMetadata {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         
-        'result': !exists(json, 'result') ? undefined : json['result'],
+        'topic': !exists(json, 'topic') ? undefined : json['topic'],
     };
 }
 
-export function ClearFirmwareErrorResponseToJSON(value?: ClearFirmwareErrorResponse | null): any {
+export function MQTTMetadataToJSON(value?: MQTTMetadata | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -50,7 +50,7 @@ export function ClearFirmwareErrorResponseToJSON(value?: ClearFirmwareErrorRespo
     }
     return {
         
-        'result': value.result,
+        'topic': value.topic,
     };
 }
 
