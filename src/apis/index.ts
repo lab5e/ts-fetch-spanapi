@@ -1,3 +1,4 @@
+export * from './BlobsApi';
 export * from './CertificatesApi';
 export * from './CollectionsApi';
 export * from './DevicesApi';
