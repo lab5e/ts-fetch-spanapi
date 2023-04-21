@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 export * from './AddDownstreamMessageRequest';
 export * from './Any';
 export * from './Blob';
@@ -14,6 +16,7 @@ export * from './CreateCertificateResponse';
 export * from './CreateCollectionRequest';
 export * from './CreateDeviceRequest';
 export * from './CreateFirmwareRequest';
+export * from './CreateGatewayRequest';
 export * from './CreateOutputRequest';
 export * from './DeleteDownstreamMessageResponse';
 export * from './Device';
@@ -36,8 +39,6 @@ export * from './GatewayMetadata';
 export * from './GatewayStatus';
 export * from './GatewayType';
 export * from './InetMetadata';
-export * from './InlineObject';
-export * from './InlineObject1';
 export * from './ListBlobResponse';
 export * from './ListCollectionResponse';
 export * from './ListDataResponse';
@@ -69,6 +70,7 @@ export * from './UDPMetadata';
 export * from './UpdateCollectionRequest';
 export * from './UpdateDeviceRequest';
 export * from './UpdateFirmwareRequest';
+export * from './UpdateGatewayRequest';
 export * from './UpdateOutputRequest';
 export * from './VerifyCertificateRequest';
 export * from './VerifyCertificateResponse';

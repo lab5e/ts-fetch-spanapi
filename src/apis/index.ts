@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 export * from './BlobsApi';
 export * from './CertificatesApi';
 export * from './CollectionsApi';
