@@ -14,43 +14,43 @@
 
 import { exists, mapValues } from '../runtime';
 /**
- * 
+ * Statistics for a single blob
  * @export
- * @interface GatewayCustomConfig
+ * @interface BlobStats
  */
-export interface GatewayCustomConfig {
+export interface BlobStats {
     /**
      * 
-     * @type {{ [key: string]: string; }}
-     * @memberof GatewayCustomConfig
+     * @type {number}
+     * @memberof BlobStats
      */
-    params?: { [key: string]: string; };
+    blobBytesMb?: number;
 }
 
 /**
- * Check if a given object implements the GatewayCustomConfig interface.
+ * Check if a given object implements the BlobStats interface.
  */
-export function instanceOfGatewayCustomConfig(value: object): boolean {
+export function instanceOfBlobStats(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function GatewayCustomConfigFromJSON(json: any): GatewayCustomConfig {
-    return GatewayCustomConfigFromJSONTyped(json, false);
+export function BlobStatsFromJSON(json: any): BlobStats {
+    return BlobStatsFromJSONTyped(json, false);
 }
 
-export function GatewayCustomConfigFromJSONTyped(json: any, ignoreDiscriminator: boolean): GatewayCustomConfig {
+export function BlobStatsFromJSONTyped(json: any, ignoreDiscriminator: boolean): BlobStats {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         
-        'params': !exists(json, 'params') ? undefined : json['params'],
+        'blobBytesMb': !exists(json, 'blobBytesMb') ? undefined : json['blobBytesMb'],
     };
 }
 
-export function GatewayCustomConfigToJSON(value?: GatewayCustomConfig | null): any {
+export function BlobStatsToJSON(value?: BlobStats | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -59,7 +59,7 @@ export function GatewayCustomConfigToJSON(value?: GatewayCustomConfig | null): a
     }
     return {
         
-        'params': value.params,
+        'blobBytesMb': value.blobBytesMb,
     };
 }
 

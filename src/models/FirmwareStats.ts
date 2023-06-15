@@ -14,43 +14,43 @@
 
 import { exists, mapValues } from '../runtime';
 /**
- * 
+ * Statistics for a single firmware image
  * @export
- * @interface GatewayCustomConfig
+ * @interface FirmwareStats
  */
-export interface GatewayCustomConfig {
+export interface FirmwareStats {
     /**
      * 
-     * @type {{ [key: string]: string; }}
-     * @memberof GatewayCustomConfig
+     * @type {number}
+     * @memberof FirmwareStats
      */
-    params?: { [key: string]: string; };
+    firmwareImageSize?: number;
 }
 
 /**
- * Check if a given object implements the GatewayCustomConfig interface.
+ * Check if a given object implements the FirmwareStats interface.
  */
-export function instanceOfGatewayCustomConfig(value: object): boolean {
+export function instanceOfFirmwareStats(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function GatewayCustomConfigFromJSON(json: any): GatewayCustomConfig {
-    return GatewayCustomConfigFromJSONTyped(json, false);
+export function FirmwareStatsFromJSON(json: any): FirmwareStats {
+    return FirmwareStatsFromJSONTyped(json, false);
 }
 
-export function GatewayCustomConfigFromJSONTyped(json: any, ignoreDiscriminator: boolean): GatewayCustomConfig {
+export function FirmwareStatsFromJSONTyped(json: any, ignoreDiscriminator: boolean): FirmwareStats {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         
-        'params': !exists(json, 'params') ? undefined : json['params'],
+        'firmwareImageSize': !exists(json, 'firmwareImageSize') ? undefined : json['firmwareImageSize'],
     };
 }
 
-export function GatewayCustomConfigToJSON(value?: GatewayCustomConfig | null): any {
+export function FirmwareStatsToJSON(value?: FirmwareStats | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -59,7 +59,7 @@ export function GatewayCustomConfigToJSON(value?: GatewayCustomConfig | null): a
     }
     return {
         
-        'params': value.params,
+        'firmwareImageSize': value.firmwareImageSize,
     };
 }
 
