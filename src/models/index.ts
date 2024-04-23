@@ -1,5 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
+export * from './ActivityEvent';
 export * from './AddDownstreamMessageRequest';
 export * from './Any';
 export * from './Blob';
