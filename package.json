@@ -1,6 +1,6 @@
 {
   "name": "@lab5e/ts-fetch-spanapi",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "OpenAPI client for @lab5e/ts-fetch-spanapi",
   "author": "OpenAPI-Generator",
   "repository": {
