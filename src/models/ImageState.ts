@@ -14,78 +14,78 @@
 
 import { exists, mapValues } from '../runtime';
 /**
- * 
+ * State for a single image on a device
  * @export
- * @interface ActivityEvent
+ * @interface ImageState
  */
-export interface ActivityEvent {
+export interface ImageState {
     /**
      * 
      * @type {string}
-     * @memberof ActivityEvent
-     */
-    event?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ActivityEvent
-     */
-    time?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ActivityEvent
+     * @memberof ImageState
      */
     collectionId?: string;
     /**
      * 
      * @type {string}
-     * @memberof ActivityEvent
+     * @memberof ImageState
      */
     deviceId?: string;
     /**
      * 
      * @type {string}
-     * @memberof ActivityEvent
+     * @memberof ImageState
      */
-    gatewayId?: string;
+    imageId?: string;
     /**
      * 
-     * @type {{ [key: string]: string; }}
-     * @memberof ActivityEvent
+     * @type {string}
+     * @memberof ImageState
      */
-    data?: { [key: string]: string; };
+    updated?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ImageState
+     */
+    state?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ImageState
+     */
+    message?: string;
 }
 
 /**
- * Check if a given object implements the ActivityEvent interface.
+ * Check if a given object implements the ImageState interface.
  */
-export function instanceOfActivityEvent(value: object): boolean {
+export function instanceOfImageState(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function ActivityEventFromJSON(json: any): ActivityEvent {
-    return ActivityEventFromJSONTyped(json, false);
+export function ImageStateFromJSON(json: any): ImageState {
+    return ImageStateFromJSONTyped(json, false);
 }
 
-export function ActivityEventFromJSONTyped(json: any, ignoreDiscriminator: boolean): ActivityEvent {
+export function ImageStateFromJSONTyped(json: any, ignoreDiscriminator: boolean): ImageState {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         
-        'event': !exists(json, 'event') ? undefined : json['event'],
-        'time': !exists(json, 'time') ? undefined : json['time'],
         'collectionId': !exists(json, 'collectionId') ? undefined : json['collectionId'],
         'deviceId': !exists(json, 'deviceId') ? undefined : json['deviceId'],
-        'gatewayId': !exists(json, 'gatewayId') ? undefined : json['gatewayId'],
-        'data': !exists(json, 'data') ? undefined : json['data'],
+        'imageId': !exists(json, 'imageId') ? undefined : json['imageId'],
+        'updated': !exists(json, 'updated') ? undefined : json['updated'],
+        'state': !exists(json, 'state') ? undefined : json['state'],
+        'message': !exists(json, 'message') ? undefined : json['message'],
     };
 }
 
-export function ActivityEventToJSON(value?: ActivityEvent | null): any {
+export function ImageStateToJSON(value?: ImageState | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -94,12 +94,12 @@ export function ActivityEventToJSON(value?: ActivityEvent | null): any {
     }
     return {
         
-        'event': value.event,
-        'time': value.time,
         'collectionId': value.collectionId,
         'deviceId': value.deviceId,
-        'gatewayId': value.gatewayId,
-        'data': value.data,
+        'imageId': value.imageId,
+        'updated': value.updated,
+        'state': value.state,
+        'message': value.message,
     };
 }
 
